@@ -1,0 +1,98 @@
+#####################################################################
+#####################################################################
+library(tidyverse)
+message("Hello there")
+
+# Debuguging
+Dates = as.Date(c("2011-04-05", 35))
+min(Dates)
+lm(1:2 ~ Dates)
+summary(mod)
+
+#Warning
+tmp <- log(-pi)
+is.na(tmp)
+
+B= 500 #boot replications
+1/B
+log(pi)
+
+# Error
+lm(x ~ y , Weights = z , iris, col = "blue" ) #we do not have x and y in our environment
+
+tapply(iris$Sepal.Length, iris$Species ,
+       quantile, 
+       probs= c (0.5) , 
+       na.rm = TRUE)
+
+#Functions ----
+lm
+
+Sys.Date()
+
+#Function to report Year , Month and Day of today
+source("C:/Users/Syeda/Documents/R_course/Rcourse_702/Code/function.R")
+    
+TD()
+
+TDx()
+TDx(as.Date("2020-12-31"))
+
+
+#### TOOLS
+traceback()
+
+mean(x)
+traceback()
+
+debug()
+
+browser()
+
+# browser() and debug()
+source('Code/MyFunctions.R')
+
+# Practice -----
+##using traceback----
+
+funPower(2, 3)
+traceback()
+
+##using line-by-line execution
+
+x =  2; y = 3
+funPower2 <- function(x, y){
+      z <- x^2
+     }
+z = x^y
+z
+ra <- funRatio(x, y)
+
+#using debug---
+#Mark a function that will be debugged
+debug(funPower)
+funPower(2, 3)
+
+
+#after finishing debugging
+undebug(funPower)
+
+#can apply to other functions
+debug(lm)
+lm(x ~ y )
+undebug(lm)
+
+
+
+
+##using browser----
+
+#Place browser() in your code and 
+#source the function again
+source('Code/MyFunctions.R')
+funPower(2,3)
+
+
+funPower(2, y = 2)
+funPower(2, 3)
+
